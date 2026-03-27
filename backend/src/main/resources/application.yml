@@ -1,0 +1,53 @@
+server:
+  port: 8080
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+      enabled: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/PersonalWebsiteLibrary?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: mcbird234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 3504812013@qq.com
+    password: kxynfklwmhthchaj
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+
+weather:
+  api:
+      key: 6af88bbf132544889dd8eed7ea47e230
+      url: https://nj7qqt8h2x.re.qweatherapi.com/v7/weather/now
+
+file:
+  upload-dir: uploads
+
+logging:
+  level:
+    com.mmc.collection: DEBUG
+
+
+jwt:
+  secret: ifyouwantitthenyouwillhavetotakeit
+  expiration: 86400000
